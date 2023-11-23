@@ -23,11 +23,11 @@ export class SidebarComponent {
   }
 
   navbar =  [
-    {name: "Application Areas", link: 'component1', url: ''},
-    {name: "Key Benefits", link: 'component2', url: ''},
-    {name: "Getting Started", link: 'component3', url: ''},
+    {name: "Где чаще всего используют?", link: 'component1', url: ''},
+    {name: "Наши преимущества", link: 'component2', url: ''},
+    {name: "Этапы работы с нами", link: 'component3', url: ''},
     {name: "F.A.Q.", link: 'component4', url: ''},
-    {name: "Blog", link: 'blog', url: 'blog'},
+    {name: "Блог", link: 'blog', url: 'blog'},
   ]
 
   close(link: string) {

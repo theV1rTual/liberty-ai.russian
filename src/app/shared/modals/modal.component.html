@@ -3,7 +3,7 @@
     <!--  title-->
     <div class="flex justify-between items-center mb-5">
       <div>
-        <h2 class="text-lg w-[75%] md:w-auto font-semibold">Fill out the form to Get Started</h2>
+        <h2 class="text-lg w-[75%] md:w-auto font-semibold">Заполните форму, чтобы начать</h2>
       </div>
       <div>
         <button matDialogClose="">
@@ -15,34 +15,34 @@
     <!--  content-->
     <form [formGroup]="formGroup" class="flex flex-col gap-5">
       <div class="mb-3">
-        <input [formControl]="formGroup.controls.name"  class="w-full bg-input-bg border-input-border border-opacity-40 rounded-xl px-4 py-2 border" id="first-name" type="text"  placeholder="Name">
+        <input [formControl]="formGroup.controls.name"  class="w-full bg-input-bg border-input-border border-opacity-40 rounded-xl px-4 py-2 border" id="first-name" type="text"  placeholder="Имя">
         <div *ngIf="formGroup.get('name')?.hasError('required') && formGroup.get('name')?.touched">
-          Name is required.
+          Требуется имя.
         </div>
       </div>
 
       <div class="mb-3">
-        <input [formControl]="formGroup.controls.phone"  class="w-full bg-input-bg border-input-border border-opacity-40 rounded-xl px-4 py-2 border" id="phone" type="text" placeholder="Phone number">
+        <input [formControl]="formGroup.controls.phone"  class="w-full bg-input-bg border-input-border border-opacity-40 rounded-xl px-4 py-2 border" id="phone" type="text" placeholder="Номер телефона">
         <div *ngIf="formGroup.get('phone')?.hasError('required') && formGroup.get('phone')?.touched">
-          Phone is required.
+          Телефон обязателен.
         </div>
         <div *ngIf="formGroup.get('phone')?.hasError('pattern') && formGroup.get('phone')?.touched">
-          Please enter a 10-digit number.
+          Пожалуйста, введите 10-значный номер.
         </div>
       </div>
 
       <div class="mb-3">
-        <input [formControl]="formGroup.controls.email"  class="w-full bg-input-bg border-input-border border-opacity-40 rounded-xl px-4 py-2 border" id="email" type="text" placeholder="Email address">
+        <input [formControl]="formGroup.controls.email"  class="w-full bg-input-bg border-input-border border-opacity-40 rounded-xl px-4 py-2 border" id="email" type="text" placeholder="Электронная почта">
         <div *ngIf="formGroup.get('email')?.hasError('required') && formGroup.get('email')?.touched">
-          Email is required.
+          Требуется электронная почта.
         </div>
         <div *ngIf="formGroup.get('email')?.hasError('email') && formGroup.get('email')?.touched">
-          Please enter a valid email address.
+          Пожалуйста, введите действительный адрес электронной почты.
         </div>
       </div>
 
       <button class="w-full bg-button-color rounded-xl p-2" (click)="submit()" [disabled]="formGroup.invalid"  matDialogClose="">
-        Submit
+        Отправить
       </button>
     </form>
   </div>
