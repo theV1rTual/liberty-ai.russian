@@ -1,0 +1,21 @@
+<div class="bg-bg relative z-[9999999]">
+  <div [class.translate-x-0]="isSidebarOpen" [class.translate-x-full]="!isSidebarOpen"
+       class="fixed inset-y-0 right-0 w-[100%] bg-bg text-white transform transition-transform ease-in-out duration-300">
+    <div class="flex justify-between items-center p-5">
+      <div>
+        <p>Menu</p>
+      </div>
+      <div>
+        <img (click)="toggleSidebar()" src="assets/images/closesquare.svg" />
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <ul>
+        <li *ngFor="let link of navbar" class="text-xl mb-5">
+          <button (click)="close(link.link)"  routerLink="/{{link.url}}" >{{link.name}}</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,34 @@
+<div class="bg-bg p-5 w-[100%] h-[90vh] overflow-auto ">
+  <div class="bg-bg rounded-2xl">
+    <!--  title-->
+    <div class="flex items-center mb-5 gap-5 mt-[5vh]">
+      <div matDialogClose="" class="cursor-pointer">
+        <mat-icon>arrow_back</mat-icon>
+      </div>
+      <div class="flex gap-5">
+        <h2 class="text-lg font-semibold">{{blog.title}}</h2>
+      </div>
+
+    </div>
+
+    <!--  content-->
+    <div class="hidden md:block">
+      <div class="container mx-auto mt-5">
+        <div class="custom-columns">
+          <img src="https://backend-designers.liberty.space/{{blog.image}}" alt="Image description" class="image mb-3">
+          <div class="image-container">
+            <p class="text-left">
+              {{blog.text}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:hidden">
+      <img src="https://backend-designers.liberty.space/{{blog.image}}" class="mb-3" />
+      <p>{{blog.text}}</p>
+    </div>
+  </div>
+
+</div>

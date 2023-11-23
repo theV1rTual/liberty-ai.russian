@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  color: white;
+}
+body { margin: 0; font-family: 'Montserrat', sans-serif; }
+
+//html, body { height: 100%; }
+body { margin: 0 }
+
+img.slideshow-image {
+  max-width: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.custom-bg {
+  background: radial-gradient(circle, rgba(0, 221, 255, 0.2), rgba(0, 221, 255, 0.2)),
+  #07071c; /* Replace with your desired colors */
+
+  /* Other styling properties */
+  width: 100%; /* Set the width and height of the element as needed */
+  height: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Start with the sidebar hidden */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: transform 0.3s ease-in-out; /* Add the transition */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Slide the sidebar in when it's open */
+}
+
+.animate-in {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.sound-wave-pattern {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+}
+
+.custom-columns {
+  columns: 2;
+  column-gap: 20px; /* Adjust the gap between columns as needed */
+  width: 80%; /* Adjust the width of the container as needed */
+  margin: 0 auto; /* Center the container on the page */
+  //max-height: 300px; /* Set a maximum height for the container */
+  overflow-y: auto; /* Add a vertical scrollbar when content exceeds the container's height */
+}
+.image-container {
+  display: flex;
+  align-items: center; /* Vertically center the image and text */
+  gap: 10px; /* Adjust the gap between the image and text as needed */
+}
+.image {
+  object-fit: cover;
+}
+
+/* Scrollbar styling for WebKit-based browsers */
+.custom-columns::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+}
+
+.custom-columns::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+.custom-columns::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the thumb on hover */
+}
+
+.custom-columns::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the track */
+  border-radius: 6px; /* Rounded corners for the track */
+}

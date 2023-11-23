@@ -1,0 +1,37 @@
+<div class="grid grid-cols-1 gap-16 mb-40">
+    <h2 class="font-bold text-[16px] text-active-tab-color">Пример диалога с роботом</h2>
+    <div class="card rounded-xl p-4 bg-container-bg-color bg-opacity-50">
+        <h2 class="font-bold text-[20px] p-3 mb-2">Голосовые роботы</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 ml-5">
+            <ul class="options md:flex md:flex-col text-[16px] w-[45%]">
+                <ng-container *ngFor="let option of options">
+                    <li [@enlargeTrigger]="option.active ? 'active' : 'inactive'" (click)="toggleState(option)" [ngClass]="{'bg-button-color': option.active, 'bg-border-color ': !option.active}" class="mb-3 md:mb-5 cursor-pointer p-2.5 rounded-xl">
+                        {{option.name}}
+                    </li>
+                </ng-container>
+            </ul>
+            <div class="flex flex-col gap-3 md:gap-5 col-span-2">
+                <ng-container *ngIf="activeOption === 'birthday'">
+                    <p class="mb-3 md:mb-0">Поздравление клиентов с днем рождения и отправка промокодов</p>
+                    <div class="w-full md:w-2/3 flex gap-2">
+                        <!-- Clickable image to activate 'birthday' audio -->
+                        <img (click)="activateAudio('birthday')" class="cursor-pointer" src="assets/images/Group%2096%202.svg" />
+
+                        <!-- Display a single image based on the currentImageIndex -->
+                        <img [src]="imageUrls[currentImageIndex]">
+                    </div>
+
+                </ng-container>
+                <ng-container *ngIf="activeOption === 'status'">
+                    <p class="mb-3 md:mb-0">Узнать че там по статусу</p>
+                    <div class="w-full md:w-2/3 flex gap-2">
+                        <img (click)="activateAudio('status')" class="cursor-pointer" src="assets/images/Group%2096%202.svg" />
+
+                        <!-- Display a single image based on the currentImageIndex -->
+                        <img [src]="imageUrls[currentImageIndex]">
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

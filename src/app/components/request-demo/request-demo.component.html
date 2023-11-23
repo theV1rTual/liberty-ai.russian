@@ -1,0 +1,20 @@
+<div class="mb-16 md:mb-40">
+  <div class="flex flex-col justify-center items-center">
+<!--    <img src="assets/images/Component%201.svg" class="h-[15vh] md:h-[30vh] max-w-full" />-->
+    <img
+      [@fadeInOut]="currentIndex"
+      [src]="images[currentIndex]"
+      class="slideshow-image md:h-[30vh] max-w-full"
+    />
+    <div class="flex flex-col items-center mb-5 mt-5 md:text-[24px] text-[19px] md:block">
+      <!-- First Row -->
+      <h2 class="font-bold text-center ">Увеличьте конверсию в 7 раз, </h2>
+
+      <!-- Second Row -->
+      <h2 class="font-bold text-center">при этом снизив расходы в 5 раз </h2>
+    </div>
+    <div>
+      <button class="w-[100%] md:w-[auto] font-semibold md:px-10 bg-button-color bg-opacity-70 p-3 md:p-4 rounded-3xl px-6" (click)="openModal()" >Оставить заявку на демо</button>
+    </div>
+  </div>
+</div>

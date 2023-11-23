@@ -1,0 +1,33 @@
+<div class="mb-28 md:mb-40"> <!-- Adjust margin for mobile -->
+  <div class="flex flex-col md:flex-row gap-10 md:gap-0 md:w-[100%]"> <!-- Adjust flex layout for mobile and larger screens -->
+    <div class="mb-6 md:mb-0 md:w-[70%]"> <!-- Adjust margin for mobile and larger screens -->
+      <h2 class="font-bold text-xl md:text-2xl mb-4 md:mb-5"> <!-- Adjust font size and margin for mobile and larger screens -->
+        F.A.Q.
+      </h2>
+      <div class="flex flex-col gap-4"> <!-- Adjust gap for better spacing -->
+        <div *ngFor="let container of containers" class="bg-container-bg-color bg-opacity-50 rounded-xl p-4 flex">
+          <div class="flex items-start ">
+            <img class="w-8 md:w-[40px] mt-3 mr-3" src="assets/images/messagequestion.svg"/> <!-- Adjust image width for mobile and larger screens -->
+            <div>
+              <h2 class="font-bold text-lg">{{container.title}}</h2>
+              <p class="text-[16px]">{{container.text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <img src="assets/images/Group%2095.svg" class="w-[90%] md:w-[70%] mb-4 md:mb-0" /> <!-- Adjust image width for mobile and larger screens -->
+      <h2 class="font-bold text-xl md:text-2xl mb-4 md:mb-5"> <!-- Adjust font size and margin for mobile and larger screens -->
+        Хотите узнать больше?
+      </h2>
+      <p class="text-center md:w-[60%] md:mb-5"> <!-- Adjust text alignment for mobile and larger screens -->
+        Если у вас есть какие-то вопросы, напишите нам и мы обязательно свяжемся с вами
+      </p>
+      <button class="bg-button-color bg-opacity-70 p-3 md:p-4 rounded-3xl px-6 text-white mt-3 md:mt-0 md:w-[60%]" (click)="openModal()">  <!-- Adjust padding and margin for mobile and larger screens -->
+        Получить консультацию
+      </button>
+    </div>
+  </div>
+</div>

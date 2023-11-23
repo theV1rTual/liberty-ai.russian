@@ -1,0 +1,10 @@
+<div class="relative mb-16 md:mb-40 z-[41]">
+  <h2 class="font-bold text-2xl mb-5 text-center">Какие процессы мы оптимизируем?</h2>
+  <div class="flex flex-col md:flex-row gap-5 mb-5 relative z-10">
+    <div *ngFor="let process of processes" class="bg-container-bg-color bg-opacity-50 rounded-xl p-4 md:w-1/3">
+      <h2 class="font-bold text-lg mb-5">{{process.title}}</h2>
+      <p class="font-bold text-active-tab-color mb-5">{{process.description}}</p>
+      <p>{{process.text}}</p>
+    </div>
+  </div>
+</div>

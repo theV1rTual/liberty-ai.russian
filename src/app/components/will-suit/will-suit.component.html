@@ -1,0 +1,31 @@
+<div class="mb-16 md:mb-40">
+  <h2 class="font-bold text-2xl mb-5">Наши преимущества</h2>
+  <div class="flex flex-col md:items-start md:flex-row-reverse">
+    <div class="flex flex-col gap-5 md:w-[100%] md:mr-10">
+      <div>
+        <p class="text-active-tab-color">Наша Цель</p>
+        <p>
+          Наша цель:
+          <br/>- Увеличить ваши продажи
+          <br/>- Снизить расходы
+          <br/>- Расширить вашу базу клиентов
+          <br/>- Улучшить клиентский опыт
+          <br/>- Повысить эффективность методов коммуникаций
+          <br/>- Предоставить аналитику на основе собранных данных
+        </p>
+        <p class="mt-2">
+          Через оптимизированное решение с применением искусственного интеллекта.
+        </p>
+      </div>
+    </div>
+    <div class="mt-5">
+      <ul class="flex flex-wrap">
+        <li *ngFor="let category of categories" [ngClass]="!category.active ? 'bg-border-color' : 'bg-li-color' " class="px-2 py-1 mr-4 mb-3 border-li-color border-2 rounded-xl md:mr-10 md:mb-5">
+          {{category.name}}
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,8 @@
+<div class="image-container">
+  <img
+    src="assets/images/sound.svg"
+    alt="Color-Changing Image"
+    [ngClass]="{ 'color-change': changeColor }"
+  />
+</div>
+<button (click)="toggleColor()">Change Color</button>

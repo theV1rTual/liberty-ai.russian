@@ -1,0 +1,16 @@
+<div class="mb-16 md:mb-40">
+  <h2 class="font-bold text-2xl mb-4 md:mb-5">
+    Как это работает
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    <ng-container *ngFor="let tool of tools">
+      <div class="bg-container-bg-color bg-opacity-50 mb-4 rounded-xl p-4">
+        <div class="flex mb-3 md:mb-5 h-2/5 w-2/3 md:w-full mx-auto">
+          <img src="{{tool.image}}" class="w-full h-full object-cover" />
+        </div>
+        <h2 class="text-lg font-semibold mb-2 md:mb-5">{{tool.title}}</h2>
+        <p>{{tool.text}}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>
