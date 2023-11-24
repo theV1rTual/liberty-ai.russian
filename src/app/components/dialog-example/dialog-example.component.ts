@@ -72,7 +72,7 @@ export class DialogExampleComponent implements OnInit {
         // Initialize your options array here
         this.options = [
             { name: 'День рождения', active: true, value: 'birthday' },
-            { name: 'Статус заказа', active: false, value: 'status' },
+            { name: 'Черная Пятница', active: false, value: 'status' },
         ];
     }
 
