@@ -9,7 +9,6 @@
           <div class="bg-container-bg-color rounded-xl p-4 h-full flex flex-col">
             <div class="flex-grow"> <!-- Added div for text content -->
               <h2 class="font-bold mb-2 h-36">{{blog.title}}</h2>
-              <h2 class="text-active-tab-color mb-2">{{blog.created_at}}</h2>
               <h2 class="mb-2">{{getSubtitle(blog.text)}}...</h2>
             </div>
             <button class="bg-button-color w-full rounded-xl py-2" (click)="openBlog(blog.title)">Далее</button>
