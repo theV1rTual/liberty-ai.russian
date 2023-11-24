@@ -17,9 +17,9 @@
         <div class="custom-columns">
           <img src="https://backend-designers.liberty.space/{{blog.image}}" alt="Image description" class="image mb-3">
           <div class="image-container">
-            <p class="text-left">
-              {{blog.text}}
-            </p>
+            <div class="whitespace-pre-wrap font-montserrat sans-serif">
+              {{ blog.text }}
+            </div>
           </div>
         </div>
       </div>
@@ -27,7 +27,9 @@
 
     <div class="md:hidden">
       <img src="https://backend-designers.liberty.space/{{blog.image}}" class="mb-3" />
-      <p>{{blog.text}}</p>
+      <div class="whitespace-pre-wrap font-montserrat sans-serif">
+        {{ blog.text }}
+      </div>
     </div>
   </div>
 
