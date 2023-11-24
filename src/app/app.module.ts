@@ -30,6 +30,7 @@ import {PaginationComponent} from "./components/pagination/pagination.component"
 import {BlogModalComponent} from "./shared/modals/blogModal/blogModal.component";
 import {NgxSkeletonLoaderModule} from "ngx-skeleton-loader";
 import {DialogExampleComponent} from "./components/dialog-example/dialog-example.component";
+import {ThankYouPageComponent} from "./components/thank-you-page/thank-you-page.component";
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {DialogExampleComponent} from "./components/dialog-example/dialog-example
     MainComponent,
     PaginationComponent,
     BlogModalComponent,
-    DialogExampleComponent
+    DialogExampleComponent,
+    ThankYouPageComponent
   ],
   imports: [
     BrowserModule,

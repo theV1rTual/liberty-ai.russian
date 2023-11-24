@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {FormService} from "../../services/form.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-modal',
@@ -9,7 +10,7 @@ import {FormService} from "../../services/form.service";
 
 export class ModalComponent {
 
-  constructor(public formService: FormService, ) {
+  constructor(public formService: FormService, private router: Router) {
   }
 
   formGroup = new FormGroup({
@@ -19,10 +20,10 @@ export class ModalComponent {
   })
 
   submit(): void {
-    console.log(1342);
     this.formService.sendRequest(this.formGroup.getRawValue()).subscribe(
       (response) => {
         console.log('API response:', response);
+        this.router.navigate(['/thank-you']);
       },
       (error) => {
         console.error('Error:', error);

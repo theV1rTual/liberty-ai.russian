@@ -50,9 +50,6 @@ export class HeroComponent implements OnInit{
     }, 1000);
   }
 
-  playButton(): void {
-    this.playStarted = true
-  }
 
   currentProgress: number = 0; // Initialize currentProgress to 0
 
