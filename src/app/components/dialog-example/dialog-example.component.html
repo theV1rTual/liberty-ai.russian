@@ -5,7 +5,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <ul class="options md:flex md:flex-col text-[16px] w-full md:w-[55%] ml-4">
                 <ng-container *ngFor="let option of options">
-                    <li [@enlargeTrigger]="option.active ? 'active' : 'inactive'" (click)="toggleState(option)" [ngClass]="{'bg-button-color': option.active, 'bg-border-color ': !option.active}" class="mb-3 md:mb-5 cursor-pointer p-2.5 rounded-xl">
+                    <li [@enlargeTrigger]="option.active ? 'active' : 'inactive'" (click)="toggleState(option)" [ngClass]="{'bg-button-color': option.active, 'bg-border-color ': !option.active}" class="z-[9999] mb-3 md:mb-5 cursor-pointer p-2.5 rounded-xl">
                         {{option.name}}
                     </li>
                 </ng-container>
